@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+   <meta charset=”utf-8”>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <title>MyStuff Frontend</title>
+</head>
+
+<body>
+   <h1 class="display-3">MyStuff Frontend</h1>
+   <table class="table table-striped">
+      <thead class="thead-dark">
+         <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Location</th>
+            <th scope="col">Amount</th>
+            <th scope="col"></th>
+         </tr>
+      </thead>
+      <tbody> </tbody>
+   </table>
+   <button type="button" class="btn btn-success" id="newItem" data-toggle="modal" data-target="#itemModal">New</button>
+
+   <!-- Modal -->
+   <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">MyStuff Item</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <form>
+               <div class="modal-body">
+                  <input type="hidden" id="itemId">
+                  <div class="form-group">
+                     <label for="itemName">Name</label>
+                     <input type="text" class="form-control" id="itemName" aria-describedby="emailHelp"
+                        placeholder="Enter name">
+                  </div>
+                  <div class="form-group">
+                     <label for="itemLocation">Location</label>
+                     <input type="text" class="form-control" id="itemLocation" aria-describedby="emailHelp"
+                        placeholder="Enter location">
+                  </div>
+                  <div class="form-group">
+                     <div class="row">
+                        <div class="col">
+                           <label for="itemAmount">Amount</label>
+                           <input type="number" class="form-control" id="itemAmount" placeholder="0">
+                        </div>
+                        <div class="col">
+                           <label for="itemLastUsed">Date last used</label>
+                           <input type="date" class="form-control" id="itemLastUsed">
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="itemDescription">Description</label>
+                        <input type="text" class="form-control" id="itemDescription" placeholder="Enter description">
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveItem">Save changes</button>
+                  </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+   <script src='myStuffFrontend.js'></script>
+</body>
+
+</html>
